@@ -1,4 +1,5 @@
-import { useSection } from "deco/hooks/useSection.ts";
+// deno-lint-ignore-file jsx-button-has-type react-no-danger
+import { useSection } from "@deco/deco/hooks";
 
 export interface Props {
   /**

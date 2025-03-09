@@ -1,3 +1,4 @@
+// deno-lint-ignore-file jsx-button-has-type
 /**
  * Theme generator inspired by Daisy UI:
  * Copyright (c) 2020 Pouya Saadeghi
