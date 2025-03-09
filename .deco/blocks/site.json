@@ -28,7 +28,22 @@
   },
   "__resolveType": "site/apps/site.ts",
   "firstByteThresholdMS": true,
-  "theme": {
-    "__resolveType": "Neutral"
+  "abTesting": {
+    "replaces": [],
+    "includeScriptsToHead": {
+      "includes": []
+    },
+    "includeScriptsToBody": {
+      "includes": []
+    }
+  },
+  "flavor": {
+    "framework": "fresh"
+  },
+  "model": "claude-3-7-sonnet-20250219",
+  "anthropicApiKey": {
+    "__resolveType": "website/loaders/secret.ts",
+    "name": "ANTHROPIC_API_KEY",
+    "encrypted": "bffa32607169b97a51841ba20dbadfbcdfbce26ee5063ff4a02a2f762445fc586ac92fdf6912504a717bb39d54f4af84191b1f40b50cc48f0299a350b0b3f681478967a5be77c37c8f9895a3077d380bbe777e880f333f78de3c353e5f1f319c8d434e519d32e4946fb856b9e5895452"
   }
 }
