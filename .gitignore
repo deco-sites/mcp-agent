@@ -78,3 +78,4 @@ _fresh/
 _docker_deps.ts
 .metadata/changeset.json
 .deco/metadata
+.env

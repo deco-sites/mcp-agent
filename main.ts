@@ -15,7 +15,12 @@ const deco = await Deco.init<Manifest>({
 });
 const envPort = Deno.env.get("PORT");
 
-app.use("/*", mcpServer(deco));
+app.use(
+  "/*",
+  mcpServer(deco, {
+    include: ["site/loaders/helloWorld.ts", "site/loaders/randomNumber.ts"],
+  }),
+);
 app.all("/*", async (c) => c.res = await deco.fetch(c.req.raw));
 
 Deno.serve({ handler: app.fetch, port: envPort ? +envPort : 8000 });

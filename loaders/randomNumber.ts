@@ -1,7 +1,7 @@
 /**
- * @title random_number
+ * @name random_number
  * @description Returns a random number between 0 and 1
  */
-export default function randomNumber() {
-  return Math.random();
+export default function randomNumber(): { rand: number } {
+  return { rand: Math.random() };
 }

@@ -591,6 +591,11 @@ html {
     max-width: 1536px;
   }
 }
+.avatar.placeholder > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .badge {
   display: inline-flex;
   align-items: center;
@@ -1651,6 +1656,9 @@ input.tab:checked + .tab-content,
 .input[list]::-webkit-calendar-picker-indicator {
   line-height: 1em;
 }
+.input-bordered {
+  border-color: var(--fallback-bc,oklch(var(--bc)/0.2));
+}
 .input:focus,
   .input:focus-within {
   box-shadow: none;
@@ -2183,6 +2191,13 @@ input.tab:checked + .tab-content,
   border-radius: 9999px;
   padding: 0px;
 }
+.input-sm, input.input-sm {
+  height: 2rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 2rem;
+}
 .join.join-vertical {
   flex-direction: column;
 }
@@ -2324,6 +2339,10 @@ input.tab:checked + .tab-content,
 .m-8 {
   margin: 2rem;
 }
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 .my-1 {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
@@ -2340,11 +2359,17 @@ input.tab:checked + .tab-content,
 .ml-2 {
   margin-left: 0.5rem;
 }
+.ml-auto {
+  margin-left: auto;
+}
 .mr-2 {
   margin-right: 0.5rem;
 }
 .mr-3 {
   margin-right: 0.75rem;
+}
+.mt-1 {
+  margin-top: 0.25rem;
 }
 .mt-10 {
   margin-top: 2.5rem;
@@ -2393,6 +2418,9 @@ input.tab:checked + .tab-content,
 }
 .h-\[3px\] {
   height: 3px;
+}
+.h-\[600px\] {
+  height: 600px;
 }
 .h-full {
   height: 100%;
@@ -2488,11 +2516,17 @@ input.tab:checked + .tab-content,
 .min-w-\[4px\] {
   min-width: 4px;
 }
+.max-w-2xl {
+  max-width: 42rem;
+}
 .max-w-6xl {
   max-width: 72rem;
 }
 .max-w-\[139px\] {
   max-width: 139px;
+}
+.max-w-\[200px\] {
+  max-width: 200px;
 }
 .max-w-\[2px\] {
   max-width: 2px;
@@ -2527,6 +2561,9 @@ input.tab:checked + .tab-content,
 .max-w-\[522px\] {
   max-width: 522px;
 }
+.max-w-\[80\%\] {
+  max-width: 80%;
+}
 .max-w-\[80px\] {
   max-width: 80px;
 }
@@ -2535,6 +2572,9 @@ input.tab:checked + .tab-content,
 }
 .max-w-sm {
   max-width: 24rem;
+}
+.flex-1 {
+  flex: 1 1 0%;
 }
 .flex-shrink {
   flex-shrink: 1;
@@ -2636,11 +2676,19 @@ input.tab:checked + .tab-content,
 .gap-\[6px\] {
   gap: 6px;
 }
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
 .overflow-hidden {
   overflow: hidden;
 }
 .overflow-x-auto {
   overflow-x: auto;
+}
+.overflow-y-auto {
+  overflow-y: auto;
 }
 .truncate {
   overflow: hidden;
@@ -2725,6 +2773,16 @@ input.tab:checked + .tab-content,
 .border-2 {
   border-width: 2px;
 }
+.border-b {
+  border-bottom-width: 1px;
+}
+.border-t {
+  border-top-width: 1px;
+}
+.border-base-200 {
+  --tw-border-opacity: 1;
+  border-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-border-opacity)));
+}
 .border-transparent {
   border-color: transparent;
 }
@@ -2743,9 +2801,17 @@ input.tab:checked + .tab-content,
   --tw-bg-opacity: 1;
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
 }
+.bg-base-200 {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity)));
+}
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+.bg-primary {
+  --tw-bg-opacity: 1;
+  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
 }
 .bg-secondary {
   --tw-bg-opacity: 1;
@@ -2928,6 +2994,9 @@ input.tab:checked + .tab-content,
 .font-light {
   font-weight: 300;
 }
+.font-medium {
+  font-weight: 500;
+}
 .font-normal {
   font-weight: 400;
 }
@@ -2998,12 +3067,24 @@ input.tab:checked + .tab-content,
   --tw-text-opacity: 1;
   color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
 }
+.text-primary-content {
+  --tw-text-opacity: 1;
+  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+}
 .text-secondary {
   --tw-text-opacity: 1;
   color: var(--fallback-s,oklch(var(--s)/var(--tw-text-opacity)));
 }
 .underline {
   text-decoration-line: underline;
+}
+.opacity-70 {
+  opacity: 0.7;
+}
+.shadow-lg {
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);

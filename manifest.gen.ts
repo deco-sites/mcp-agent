@@ -2,12 +2,16 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$$$$$$$0 from "./actions/chat/ai-response.ts";
 import * as $$$$$$$$$$$0 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 import * as $$$0 from "./loaders/helloWorld.ts";
 import * as $$$1 from "./loaders/randomNumber.ts";
-import * as $$$$$$0 from "./sections/ItWorks.tsx";
-import * as $$$$$$1 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$0 from "./sections/Chat.tsx";
+import * as $$$$$$1 from "./sections/ChatMessages.tsx";
+import * as $$$$$$2 from "./sections/Component.tsx";
+import * as $$$$$$3 from "./sections/ItWorks.tsx";
+import * as $$$$$$4 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "loaders": {
@@ -15,8 +19,14 @@ const manifest = {
     "site/loaders/randomNumber.ts": $$$1,
   },
   "sections": {
-    "site/sections/ItWorks.tsx": $$$$$$0,
-    "site/sections/Theme/Theme.tsx": $$$$$$1,
+    "site/sections/Chat.tsx": $$$$$$0,
+    "site/sections/ChatMessages.tsx": $$$$$$1,
+    "site/sections/Component.tsx": $$$$$$2,
+    "site/sections/ItWorks.tsx": $$$$$$3,
+    "site/sections/Theme/Theme.tsx": $$$$$$4,
+  },
+  "actions": {
+    "site/actions/chat/ai-response.ts": $$$$$$$$$0,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,

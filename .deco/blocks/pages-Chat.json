@@ -1,0 +1,10 @@
+{
+  "name": "Home",
+  "path": "/chat",
+  "sections": [
+    {
+      "__resolveType": "site/sections/Chat.tsx"
+    }
+  ],
+  "__resolveType": "website/pages/Page.tsx"
+}

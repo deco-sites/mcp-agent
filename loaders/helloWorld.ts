@@ -1,5 +1,5 @@
 /**
- * @title hello_world
+ * @name hello_world
  * @description Returns a hello world message
  */
 export interface Props {
